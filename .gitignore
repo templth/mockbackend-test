@@ -1,0 +1,12 @@
+node_modules
+dist
+.tmp
+.sass-cache
+bower_components
+app/scripts/json
+tmp/
+docs/api
+docs/site
+typings
+app/**/*.js
+app/**/*.js.map

@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/jasmine.min.css">
+
+    <!--script src="node_modules/es6-promise/dist/es6-promise.js"></script>
+    <script src="node_modules/es6-shim/es6-shim.js"></script-->
+
+    <!-- script src="node_modules/jasmine-core/lib/jasmine-core/jasmine.js"></script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/jasmine.js"></script>
+    <!-- script src="node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js"></script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/jasmine-html.js"></script>
+    <!-- script src="node_modules/jasmine-core/lib/jasmine-core/boot.js"></script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/boot.js"></script>
+
+    <!-- script src="https://code.angularjs.org/2.0.0-beta.17/angular2-polyfills.js"></script -->
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/zone.js/dist/async-test.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="https://code.angularjs.org/tools/system.js"></script>
+    <script src="https://code.angularjs.org/tools/typescript.js"></script>
+    <script src="config.js"></script>
+
+    <!-- script src="node_modules/angular2/bundles/testing.dev.js"></script -->
+
+    <script>
+      System.import('@angular/core/testing')
+        .then(function(coreTesting){
+          return System.import('@angular/platform-browser/testing')
+        .then(function(browserTesting){
+          console.log(browserTesting);
+          coreTesting.setBaseTestProviders(
+            browserTesting.TEST_BROWSER_STATIC_PLATFORM_PROVIDERS,
+            browserTesting.TEST_BROWSER_STATIC_APPLICATION_PROVIDERS
+          );
+        });
+      })
+      .then(function() {
+        /*return System.import('@angular/http/test/backends/xhr_backend_spec').then((mod) => {
+          mod.main();
+          return '';
+        })*/
+        return System.import('app/http.spec').then((mod) => {
+        })
+        .then(window.onload);
+      });
+
+      /*System.import('app/app.test')
+        .then((src) => {
+          console.log('main');
+          src.main();
+          return '';
+        }).then(window.onload);*/
+    </script>
+
+    <!--script>
+  // Demo only!
+  describe('Hero', function() {
+    it('has name given in the constructor', function() {
+      var hero = new Hero(1, 'Super Cat');
+      expect(hero.name).toEqual('Super Cat');
+    });
+    it('has the id given in the constructor', function() {
+      var hero = new Hero(1, 'Super Cat');
+      expect(hero.id).toEqual(1);
+    });
+  });
+</script-->
+
+  </head>
+</html>
