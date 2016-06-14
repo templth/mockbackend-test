@@ -23,26 +23,9 @@
     <!-- script src="node_modules/angular2/bundles/testing.dev.js"></script -->
 
     <script>
-      System.import('@angular/core/testing')
-        .then(function(coreTesting){
-          return System.import('@angular/platform-browser/testing')
-        .then(function(browserTesting){
-          console.log(browserTesting);
-          coreTesting.setBaseTestProviders(
-            browserTesting.TEST_BROWSER_STATIC_PLATFORM_PROVIDERS,
-            browserTesting.TEST_BROWSER_STATIC_APPLICATION_PROVIDERS
-          );
-        });
-      })
-      .then(function() {
-        /*return System.import('@angular/http/test/backends/xhr_backend_spec').then((mod) => {
-          mod.main();
-          return '';
-        })*/
-        return System.import('app/http.spec').then((mod) => {
+        System.import('app/http.spec').then((mod) => {
         })
         .then(window.onload);
-      });
 
       /*System.import('app/app.test')
         .then((src) => {
