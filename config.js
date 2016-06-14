@@ -13,27 +13,27 @@ System.config({
       defaultExtension: 'js'
     },
     '@angular/core': {
-      main: 'index.js',
+      main: 'index.umd.js',
       defaultExtension: 'js'
     },
     '@angular/compiler': {
-      main: 'index.js',
+      main: 'index.umd.js',
       defaultExtension: 'js'
     },
     '@angular/common': {
-      main: 'index.js',
+      main: 'index.umd.js',
       defaultExtension: 'js'
     },
     '@angular/http': {
-      main: 'index.js',
+      main: 'index.umd.js',
       defaultExtension: 'js'
     },
     '@angular/platform-browser-dynamic': {
-      main: 'index.js',
+      main: 'index.umd.js',
       defaultExtension: 'js'
     },
     '@angular/platform-browser': {
-      main: 'index.js',
+      main: 'index.umd.js',
       defaultExtension: 'js'
     },
     rxjs: {
